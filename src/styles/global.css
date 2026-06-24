@@ -1,0 +1,218 @@
+:root {
+  color: #14281d;
+  background:
+    radial-gradient(circle at top left, rgba(20, 83, 45, 0.12), transparent 28%),
+    radial-gradient(circle at right 20%, rgba(180, 83, 9, 0.12), transparent 22%),
+    linear-gradient(180deg, #f8faf7 0%, #eef5ed 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: #14281d;
+  background: transparent;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.app-sider {
+  background: linear-gradient(180deg, #143026 0%, #1d4d3b 100%) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-block {
+  padding: 28px 22px 18px;
+}
+
+.brand-title,
+.brand-subtitle,
+.page-title,
+.page-subtitle {
+  margin: 0 !important;
+}
+
+.brand-title {
+  color: #f7fff7 !important;
+}
+
+.brand-subtitle {
+  color: rgba(247, 255, 247, 0.72) !important;
+}
+
+.app-menu {
+  background: transparent !important;
+  border-inline-end: none !important;
+  color: #f7fff7;
+}
+
+.app-menu .ant-menu-item {
+  margin-inline: 12px !important;
+  width: calc(100% - 24px) !important;
+  color: rgba(247, 255, 247, 0.82);
+  height: 56px !important;
+  line-height: 56px !important;
+  margin-bottom: 10px !important;
+  border-radius: 18px !important;
+  font-size: 18px;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.app-menu .ant-menu-item:hover {
+  color: #fff !important;
+  background: rgba(247, 255, 247, 0.08) !important;
+  transform: translateX(4px);
+}
+
+.app-menu .ant-menu-item-selected {
+  background: linear-gradient(90deg, rgba(247, 255, 247, 0.18), rgba(247, 255, 247, 0.1)) !important;
+  color: #fff !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(247, 255, 247, 0.12),
+    0 14px 26px rgba(8, 20, 14, 0.24);
+}
+
+.app-menu .ant-menu-item-selected::after {
+  display: none !important;
+}
+
+.app-menu .ant-menu-title-content {
+  letter-spacing: 0.02em;
+}
+
+.app-header {
+  height: auto;
+  line-height: 1.5;
+  padding: 26px 32px 12px;
+  background: transparent;
+}
+
+.page-subtitle {
+  color: #446154;
+}
+
+.app-content {
+  padding: 8px 32px 32px;
+}
+
+.hero-card,
+.feature-card,
+.progress-card {
+  border: 1px solid rgba(20, 40, 29, 0.08);
+  box-shadow: 0 16px 40px rgba(20, 40, 29, 0.06);
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.24s ease,
+    box-shadow 0.24s ease,
+    border-color 0.24s ease;
+}
+
+.hero-card:hover,
+.feature-card:hover,
+.progress-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 48px rgba(20, 40, 29, 0.1);
+  border-color: rgba(20, 83, 45, 0.16);
+}
+
+.upload-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.result-thumb {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #e5e7eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.result-thumb:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 24px rgba(20, 40, 29, 0.18);
+}
+
+.page-transition {
+  animation: page-enter 0.24s ease;
+}
+
+.ant-btn,
+.ant-input,
+.ant-select-selector,
+.ant-card,
+.ant-progress-bg {
+  transition: all 0.2s ease !important;
+}
+
+.ant-btn-primary {
+  box-shadow: 0 12px 24px rgba(20, 83, 45, 0.18);
+}
+
+.ant-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(20, 83, 45, 0.24);
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td {
+  transition: background 0.2s ease;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr:hover > td {
+  background: rgba(20, 83, 45, 0.04) !important;
+}
+
+.ant-input:focus,
+.ant-input-focused,
+.ant-select-focused .ant-select-selector {
+  box-shadow: 0 0 0 3px rgba(20, 83, 45, 0.12) !important;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 960px) {
+  .app-content,
+  .app-header {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .upload-grid {
+    grid-template-columns: 1fr;
+  }
+}
