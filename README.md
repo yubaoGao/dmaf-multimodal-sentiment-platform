@@ -67,4 +67,3 @@ docs/
 
 前端默认通过 `/api` 代理请求 Python 服务。推荐后端使用 FastAPI 暴露上传、任务、结果、下载接口，并将 DMAF 推理封装为异步任务。
 
-详细落地架构、数据流和接口协议见 [docs/architecture.md](/d:/基于 DMAF 的多模态图文情感分析平台/docs/architecture.md)。
